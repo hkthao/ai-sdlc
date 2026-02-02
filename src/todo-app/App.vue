@@ -60,8 +60,15 @@ const handleFilterSelected = (filter: 'all' | 'active' | 'completed') => {
   <div class="todo-app">
     <h1>My Todo App</h1>
     <TodoForm @add-todo="addTodo" />
-    <TodoFilter :current-filter="currentFilter" @filter-selected="handleFilterSelected" /> <!-- Add TodoFilter -->
-    <TodoList :todos="filteredTodos" @toggle-todo="toggleTodo" @delete-todo="deleteTodo" /> <!-- Use filteredTodos -->
+    <TodoFilter
+      :current-filter="currentFilter"
+      @filter-selected="handleFilterSelected"
+    /> <!-- Add TodoFilter -->
+    <TodoList
+      :todos="filteredTodos"
+      @toggle-todo="toggleTodo"
+      @delete-todo="deleteTodo"
+    /> <!-- Use filteredTodos -->
   </div>
 </template>
 
