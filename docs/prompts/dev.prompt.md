@@ -64,7 +64,7 @@ If ANY part of the Issue is unclear, ambiguous, or incomplete:
 3. Verify requirements against project docs
 4. Implement the required feature
 5. Commit changes with a clear message
-6. Open a Pull Request linked to the Issue (e.g. "Fixes #<issue-number>")
+6. Open a Pull Request linked to the Issue using GitHub CLI (e.g. "Fixes #<issue-number>")
 
 ---
 
