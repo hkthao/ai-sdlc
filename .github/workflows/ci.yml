@@ -16,6 +16,9 @@ jobs:
       with:
         node-version: '20' # Or appropriate version for Vue.js 3
 
+    - name: Install Root Dependencies
+      run: npm install
+
     - name: Install Frontend Dependencies
       run: npm install
       working-directory: src/todo-app
