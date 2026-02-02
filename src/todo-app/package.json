@@ -17,6 +17,7 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "vite": "^7.2.4",
     "vitest": "^1.x.x",
-    "@vitest/coverage-v8": "^1.x.x"
+    "@vitest/coverage-v8": "^1.x.x",
+    "@vue/test-utils": "^2.x.x"
   }
 }
