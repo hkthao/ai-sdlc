@@ -1,45 +1,27 @@
-# Visual Studio
-.vs/
-*.suo
-*.user
-*.userprefs
-*.sln.docstates
-
-# Build results
-[Bb]in/
-[Oo]bj/
-[Dd]ebug/
-[Rr]elease/
+# Logs
+logs
 *.log
-*.bak
-*.exe
-*.dll
-*.pdb
-*.tmp
-
-# Test Results
-TestResults/
-*.trx
-
-# Node.js / Vue.js
-node_modules/
-dist/
-build/
-.env
-.env.local
-.env.*.local
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-package-lock.json
+lerna-debug.log*
 
-# Docker
-*.dockerignore
-docker-compose.override.yml
+node_modules
+dist
+dist-ssr
+*.local
 
-# OS X
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-
-# Windows
-Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+playwright-report
+test-results
+package-lock.json
