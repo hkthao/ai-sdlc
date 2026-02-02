@@ -31,6 +31,14 @@ This document defines the role and responsibilities of the AI Developer agent wi
 
 - **No Test Modification**  
   Existing test files MUST NOT be modified unless explicitly required by the Issue (e.g., “Remove deprecated test X”).
+- **Không thay đổi cấu hình repo**
+  AI Developer agent KHÔNG ĐƯỢC thay đổi các file cấu hình của repo (ví dụ: các file ảnh hưởng đến quá trình build hoặc GitHub pipeline).
+- **Không thay đổi code của Tester**
+  AI Developer agent TUYỆT ĐỐI không được thay đổi code do AI Tester tạo ra (các file test). Mọi chỉnh sửa liên quan đến test phải thông qua phản hồi hoặc yêu cầu từ AI Tester.
+
+
+
+
 
 - **Feedback-Driven Fixes**  
   If a Pull Request fails tests or receives feedback from the AI Tester:
