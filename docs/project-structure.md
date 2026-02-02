@@ -8,7 +8,6 @@ src/todo-app/
 ├── package.json
 ├── README.md
 ├── vite.config.js
-├── vitest.config.ts # New: Vitest configuration
 ├── public/
 ├── src/
 │   ├── main.ts
@@ -27,10 +26,12 @@ src/todo-app/
 
 ```
 tests/
+├── playwright.config.ts    # Playwright configuration
+├── run_e2e_tests.sh      # Script to run E2E tests
+├── vitest.config.ts        # Vitest configuration
 ├── unit/           # Unit tests for individual logic units, composables, functions
-│   └── frontend/   # Frontend-specific unit tests (e.g., Vue components)
-│       └── components/
-│           └── TodoForm.test.ts # Example: Unit test for TodoForm component
+│   └── components/   # Frontend-specific unit tests (e.g., Vue components)
+│       └── TodoForm.test.ts # Example: Unit test for TodoForm component
 ├── integration/    # Integration tests for interactions between components/modules
 │   └── frontend/
 │       └── ...
@@ -43,5 +44,5 @@ tests/
 -   All UI components go into `src/todo-app/src/components/`.
 -   No business logic in `src/todo-app/src/App.vue`.
 -   No nested components folders unless specified.
--   Frontend unit tests for `src/todo-app` should be placed under `tests/unit/frontend/`.
+-   Frontend unit tests for `src/todo-app` should be placed under `tests/unit/components/`.
 -   Test files should follow the pattern `*.test.ts` or `*.spec.ts`.

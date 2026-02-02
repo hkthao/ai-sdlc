@@ -4,7 +4,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: '../../tests/e2e', // This is important: tests will be in the project root's 'tests/e2e' directory
+  testDir: './e2e', // This is important: tests will be in the project root's 'tests/e2e' directory
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */

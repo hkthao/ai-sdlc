@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import TodoForm from '../../../src/todo-app/src/components/TodoForm.vue'; // Correct path
+import TodoForm from '../../../src/todo-app/components/TodoForm.vue';
 
 describe('TodoForm', () => {
   it('renders properly', () => {

@@ -1,0 +1,17 @@
+{
+  "extends": "../src/todo-app/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/todo-app/*"],
+      "@tests/*": ["./tests/*"]
+    }
+  },
+  "include": [
+    "src/todo-app/**/*.ts",
+    "src/todo-app/**/*.d.ts",
+    "src/todo-app/**/*.tsx",
+    "src/todo-app/**/*.vue",
+    "tests/**/*.ts"
+  ]
+}

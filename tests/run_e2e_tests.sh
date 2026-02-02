@@ -15,7 +15,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Server is ready. Running Playwright tests..."
-npx playwright test -c src/todo-app/playwright.config.ts
+npx playwright test -c tests/playwright.config.ts
 
 TEST_EXIT_CODE=$?
 

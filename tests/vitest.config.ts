@@ -7,7 +7,9 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom', // or 'happy-dom'
     setupFiles: [], // optional, if you need a setup file
-    include: ['../../tests/unit/frontend/**/*.test.ts'], // Point to the root tests directory
+    dir: './tests',
+    include: ['unit/components/**/*.test.ts'],
+
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
