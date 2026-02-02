@@ -24,10 +24,23 @@ const remove = () => {
 </script>
 
 <template>
-  <li class="todo-item" :class="{ completed: todo.completed }">
-    <input type="checkbox" :checked="todo.completed" @change="toggle" class="todo-checkbox" />
+  <li
+    class="todo-item"
+    :class="{ completed: todo.completed }"
+  >
+    <input
+      type="checkbox"
+      :checked="todo.completed"
+      class="todo-checkbox"
+      @change="toggle"
+    >
     <span class="todo-text">{{ todo.text }}</span>
-    <button @click="remove" class="delete-button">X</button>
+    <button
+      class="delete-button"
+      @click="remove"
+    >
+      X
+    </button>
   </li>
 </template>
 

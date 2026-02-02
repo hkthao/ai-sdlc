@@ -7,7 +7,7 @@ interface Todo {
   completed: boolean;
 }
 
-const props = defineProps<{
+const { todos } = defineProps<{
   todos: Todo[];
 }>();
 
@@ -27,7 +27,12 @@ const handleDeleteTodo = (id: number) => {
 
 <template>
   <ul class="todo-list">
-    <li v-if="todos.length === 0" class="no-todos">No todos yet! Add some above.</li>
+    <li
+      v-if="todos.length === 0"
+      class="no-todos"
+    >
+      No todos yet! Add some above.
+    </li>
     <TodoItem
       v-for="todo in todos"
       :key="todo.id"

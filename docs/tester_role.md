@@ -33,6 +33,14 @@ This document defines the role and responsibilities of the AI Tester agent withi
   Actions are limited to:
   - Creating or updating test files under `tests/`
   - Providing feedback via Pull Request comments
+- **Không thay đổi cấu hình repo**
+  AI Tester agent KHÔNG ĐƯỢC thay đổi các file cấu hình của repo (ví dụ: các file ảnh hưởng đến quá trình build hoặc GitHub pipeline).
+- **Không thay đổi code của Dev**
+  AI Tester agent TUYỆT ĐỐI không được thay đổi code do AI Developer tạo ra. Mọi phản hồi hoặc yêu cầu chỉnh sửa phải thông qua Pull Request comments.
+
+
+
+
 
 - **Actionable Feedback Only**  
   All feedback MUST be:

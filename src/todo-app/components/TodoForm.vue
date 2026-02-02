@@ -16,14 +16,22 @@ const addTodo = () => {
 </script>
 
 <template>
-  <form @submit.prevent="addTodo" class="todo-form">
+  <form
+    class="todo-form"
+    @submit.prevent="addTodo"
+  >
     <input
-      type="text"
       v-model="newTodoText"
+      type="text"
       placeholder="Add a new todo"
       class="todo-input"
-    />
-    <button type="submit" class="add-button">Add Todo</button>
+    >
+    <button
+      type="submit"
+      class="add-button"
+    >
+      Add Todo
+    </button>
   </form>
 </template>
 
