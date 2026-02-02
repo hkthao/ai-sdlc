@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Start the dev server in the background
-(cd .. && npm run dev --prefix src/todo-app) &
+(cd src/todo-app && npm install && npm run dev) &
 SERVER_PID=$!
 
 echo "Waiting for the server to be ready at http://localhost:5173..."
@@ -14,9 +14,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Server is ready. Running Playwright tests..."
-npx playwright test -c playwright.config.ts
-
+echo "Server is ready. Installing Playwright dependencies and running tests..."
+# Change to the tests directory, install dependencies, and then run playwright tests
+(cd tests && npm install && npx playwright test -c playwright.config.ts)
 TEST_EXIT_CODE=$?
 
 echo "Killing the dev server (PID: $SERVER_PID)..."
