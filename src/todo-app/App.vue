@@ -13,12 +13,7 @@ interface Todo {
 const todos = ref<Todo[]>([]);
 const currentFilter = ref<'all' | 'active' | 'completed'>('all'); // State for current filter
 
-// Initialize with some dummy data since persistence is removed
-todos.value = [
-  { id: 1, text: 'Learn Vue 3', completed: true },
-  { id: 2, text: 'Build a Todo App', completed: false },
-  { id: 3, text: 'Add filtering feature', completed: false },
-];
+
 
 // Computed property for filtered todos
 const filteredTodos = computed(() => {
