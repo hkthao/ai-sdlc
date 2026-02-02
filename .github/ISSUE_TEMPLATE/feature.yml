@@ -49,3 +49,18 @@ body:
     attributes:
       label: Additional Context
       description: "Add any other context or screenshots about the feature request here."
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints / Non-Goals
+      description: |
+        Explicitly list what is OUT OF SCOPE.
+        This prevents over-engineering and unwanted features.
+      placeholder: |
+        - No authentication
+        - No persistence layer
+        - No UI framework
+        - Do not modify existing APIs
+    validations:
+      required: true
