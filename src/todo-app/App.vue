@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ref, watchEffect } from 'vue';
+import { ref, computed } from 'vue';
 import TodoForm from './components/TodoForm.vue';
 import TodoList from './components/TodoList.vue';
+import TodoFilter from './components/TodoFilter.vue'; // Import TodoFilter
 
 interface Todo {
   id: number;
@@ -10,22 +11,23 @@ interface Todo {
 }
 
 const todos = ref<Todo[]>([]);
+const currentFilter = ref<'all' | 'active' | 'completed'>('all'); // State for current filter
 
-// Load todos from localStorage on mount
-// For now, this is a placeholder. A proper storage solution
-// would be outside the scope based on the tech-stack.md.
-// We are explicitly told "No persistence" and "No backend".
-// This is for demonstration purposes within the constraints.
-watchEffect(() => {
-  const storedTodos = localStorage.getItem('todos');
-  if (storedTodos) {
-    todos.value = JSON.parse(storedTodos);
+// Initialize with some dummy data since persistence is removed
+todos.value = [
+  { id: 1, text: 'Learn Vue 3', completed: true },
+  { id: 2, text: 'Build a Todo App', completed: false },
+  { id: 3, text: 'Add filtering feature', completed: false },
+];
+
+// Computed property for filtered todos
+const filteredTodos = computed(() => {
+  if (currentFilter.value === 'active') {
+    return todos.value.filter(todo => !todo.completed);
+  } else if (currentFilter.value === 'completed') {
+    return todos.value.filter(todo => todo.completed);
   }
-});
-
-// Save todos to localStorage whenever they change
-watchEffect(() => {
-  localStorage.setItem('todos', JSON.stringify(todos.value));
+  return todos.value; // 'all' filter
 });
 
 const addTodo = (text: string) => {
@@ -48,13 +50,18 @@ const toggleTodo = (id: number) => {
 const deleteTodo = (id: number) => {
   todos.value = todos.value.filter(t => t.id !== id);
 };
+
+const handleFilterSelected = (filter: 'all' | 'active' | 'completed') => {
+  currentFilter.value = filter;
+};
 </script>
 
 <template>
   <div class="todo-app">
     <h1>My Todo App</h1>
     <TodoForm @add-todo="addTodo" />
-    <TodoList :todos="todos" @toggle-todo="toggleTodo" @delete-todo="deleteTodo" />
+    <TodoFilter :current-filter="currentFilter" @filter-selected="handleFilterSelected" /> <!-- Add TodoFilter -->
+    <TodoList :todos="filteredTodos" @toggle-todo="toggleTodo" @delete-todo="deleteTodo" /> <!-- Use filteredTodos -->
   </div>
 </template>
 
