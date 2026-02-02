@@ -14,7 +14,7 @@ ALL tests you write MUST:
 - Be traceable to Acceptance Criteria of the Issue
 - Cover ONLY behavior introduced by the PR
 
-## Input (YOU MUST ASK BEFORE START)
+## Input (YOU MUST PAUSE AND ASK FOR THIS INPUT BEFORE STARTING)
 - Pull Request number
 - GitHub Issue number
 
@@ -24,6 +24,7 @@ ALL tests you write MUST:
 - GitHub Issue (Acceptance Criteria = single source of truth)
 - docs/workflow.md
 - README.md (test stack & commands)
+- Use `run_shell_command` to execute GitHub CLI commands to fetch Pull Request and Issue details.
 
 ## Responsibilities
 

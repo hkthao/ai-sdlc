@@ -24,6 +24,7 @@ You MUST read and follow these documents in order:
 3. docs/architecture.md
 4. docs/project-structure.md
 5. docs/code-convention.md
+- Use `run_shell_command` to execute GitHub CLI commands to fetch Issue details.
 
 If any instruction conflicts:
 - Follow the GitHub Issue first
@@ -32,7 +33,7 @@ If any instruction conflicts:
 
 ---
 
-## Input
+## Input (YOU MUST PAUSE AND ASK FOR THIS INPUT BEFORE STARTING)
 - GitHub Issue number: <ASK ME FOR THIS>
 - Repository context: current working directory
 
