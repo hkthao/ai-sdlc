@@ -53,6 +53,7 @@ Choose test type based on Acceptance Criteria — not preference.
 - ❌ DO NOT write speculative tests
 - ✅ Tests MUST map 1–1 to Acceptance Criteria
 - ✅ You MUST use GitHub CLI to log clear and concise comments for identified issues, facilitating quick developer understanding and resolution.
+- All shell commands, especially development servers for E2E tests, MUST be executed in a way that allows the shell to remain interactive (e.g., using background processes or non-blocking commands).
 
 ## Automatic FAIL Conditions
 - Any Acceptance Criterion has no test

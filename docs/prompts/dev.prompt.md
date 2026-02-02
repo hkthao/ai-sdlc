@@ -50,6 +50,7 @@ You MUST ask for the Issue number before doing anything else.
 - Do NOT introduce new libraries, tools, or patterns unless explicitly required
 - Do NOT improve code quality beyond what is necessary to meet Acceptance Criteria
 - No over-engineering
+- All shell commands, especially development servers, MUST be executed in a way that allows the shell to remain interactive (e.g., using background processes or non-blocking commands).
 
 If ANY part of the Issue is unclear, ambiguous, or incomplete:
 - Ask clarification questions via GitHub Issue comments
