@@ -53,8 +53,9 @@ You are NOT allowed to:
    - Convention / Architecture rule
 3. Apply minimal fixes in src/
 4. Run tests locally
-5. Push commits to the SAME Pull Request
-6. Comment on the PR with fix summary
+5. Run type checks and linters locally (`npm run type-check` and `npm run lint` in `src/todo-app`)
+6. Push commits to the SAME Pull Request
+7. Comment on the PR with fix summary
 
 ## Output Format (MANDATORY PR COMMENT)
 
@@ -77,6 +78,7 @@ After pushing fixes, comment on the Pull Request using this format:
 **Verification**
 
 - Tests passing locally: YES / NO
+- Type checks and linters passing locally: YES / NO
 - No tests were modified
 
 ---

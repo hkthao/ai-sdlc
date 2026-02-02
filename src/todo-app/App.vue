@@ -63,12 +63,12 @@ const handleFilterSelected = (filter: 'all' | 'active' | 'completed') => {
     <TodoFilter
       :current-filter="currentFilter"
       @filter-selected="handleFilterSelected"
-    /> <!-- Add TodoFilter -->
+    />
     <TodoList
       :todos="filteredTodos"
       @toggle-todo="toggleTodo"
       @delete-todo="deleteTodo"
-    /> <!-- Use filteredTodos -->
+    />
   </div>
 </template>
 
