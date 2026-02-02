@@ -64,3 +64,20 @@ body:
         - Do not modify existing APIs
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 🤖 AI Role Instructions
+
+        **AI Developer**
+        - Implement ONLY what is described in this issue
+        - Follow Acceptance Criteria strictly
+        - DO NOT write or modify tests
+        - Ask questions via issue comments if unclear
+
+        **AI Tester**
+        - Write tests based on Acceptance Criteria
+        - Validate PR behavior only
+        - DO NOT modify production code
+
