@@ -16,6 +16,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
     "vite": "^7.2.4",
-    "vitest": "^1.x.x"
+    "vitest": "^1.x.x",
+    "@vitest/coverage-v8": "^1.x.x"
   }
 }
